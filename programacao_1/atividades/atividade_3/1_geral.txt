@@ -1,0 +1,8 @@
+1. Defina o que é uma variável na programação.
+    É um espaço alocado na memória do computador onde podemos armazenar valores diversos sob um nome escolhido (o nome, ou identificador, da variável).
+
+2. Escreva com as suas palavras a diferença entre variável e constante e como elas podem ser
+aplicadas na prática.
+    Uma variável pode ter seu valor modificado quantas vezes necessário, enquanto uma constante deve manter (por convenção, no Python) o mesmo valor.
+
+    Na prática, podemos usar uma variável para guardar o valor, por exemplo, que especifica o dia atual (vai mudar de dia em dia), enquanto uma constante pode ser usada para guardar um valor fixo, como o número Pi (inalterável).
