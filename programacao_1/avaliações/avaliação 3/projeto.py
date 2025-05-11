@@ -25,7 +25,7 @@ def procurar_carro():
 
         # usuário digita valor a ser pesquisado (estado ou preço máximo)
         pesquisa = input(
-            f'\nDigite o preço máximo do carro que você deseja, ou o estado de conservação dele ("novo", "seminovo", "conservado" ou "mal estado"): ')
+            f'\nDigite o preço máximo do carro que você deseja, ou o estado de conservação dele ("novo", "seminovo", "conservado" ou "mau estado"): ')
 
         try:
             pesquisa = float(pesquisa)  # se funcionar, pesquisa é float
@@ -101,7 +101,7 @@ def cadastrar_carro():
     with p.open('a', encoding='utf-8') as file:
         for carro in carros_a_cadastrar:
             # retirando parênteses, aspas e espaços em branco antes de salvar
-            file.write(str(carro)[1:-1].replace(" ", "").replace("'", ""))
+            file.write(f"{carro[0]},{carro[1]},{carro[2]},{carro[3]}")
             file.write('\n')
 
     # mensagem de sucesso
