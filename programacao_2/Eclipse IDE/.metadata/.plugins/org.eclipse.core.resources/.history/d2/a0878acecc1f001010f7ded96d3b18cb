@@ -1,0 +1,6 @@
+package aula;
+
+interface Mapa {
+	void coordenadas();
+	void movimento();
+}

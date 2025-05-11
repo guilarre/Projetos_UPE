@@ -1,0 +1,45 @@
+package aulas;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+
+public class Arquivos {
+	public static void main(String[] args) {
+		String filepath = "output.txt";
+			
+//			BufferedWriter é bom quando tem muitas escritas pequenas (e.g. em um loop).
+//			Sem o BW, isso faria 40 chamadas para escrita, o que é péssimo para a eficiência de escrita:
+//		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filepath))) {
+//			for(int i = 0; i < 20; i++) {
+//			    bw.write("foorbar");
+//			    bw.newLine();
+//			}
+//			bw.close();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		
+//		Já para escritas curtas, FileWriter é suficiente:
+		try (FileWriter fw = new FileWriter(filepath)) {
+			fw.write("Hello, world!");
+			fw.write("\n");
+			fw.write("This is a second line. (filewriter)");
+			fw.close();			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+//		Igual ao FileWriter, com algumas opções a mais de tratamento de erro, e algumas outras diferenças, como mais métodos e construtores
+		try (PrintWriter pw = new PrintWriter(filepath)) {
+			pw.println("Hello, world!");
+			pw.println("This is a second line. (printwriter)");
+			pw.flush();
+			pw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

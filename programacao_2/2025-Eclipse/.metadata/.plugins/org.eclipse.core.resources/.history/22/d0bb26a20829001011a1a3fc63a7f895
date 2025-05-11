@@ -1,0 +1,23 @@
+package aulas;
+
+public class Aula {
+
+	public static void main(String[] args) {
+//		Concat é exatamente igual ao +
+		String str1 = "Hello";
+		String str2 = "World";
+		String result = str1.concat(" ").concat(str2);
+//		System.out.println(result);
+
+//		Length
+//		System.out.println(result.length());
+		
+		String substr1 = result.substring(6);
+		String substr2 = result.substring(0, 5);
+//		System.out.println(substr1 + "\n" + substr2);
+		
+		String str3 = "hello";
+		System.out.println(str1.equals(str3));
+		System.out.println(str1.equalsIgnoreCase(str3));
+	}
+}

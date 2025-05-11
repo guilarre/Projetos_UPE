@@ -1,0 +1,20 @@
+package exercicioAula;
+import java.util.ArrayList;
+
+public class Aluno extends Pessoa {
+	public String matricula;
+	private static ArrayList<Aluno> alunos = new ArrayList<>();
+
+	public Aluno(String nome, String cpf, int idade, String matricula) {
+		super(nome, cpf, idade);
+		this.matricula = matricula;
+		alunos.add(this);
+	}
+	
+	public String getMatricula() {
+		return matricula;
+	}
+	public void setMatricula() {
+		this.matricula = matricula;
+	}
+}

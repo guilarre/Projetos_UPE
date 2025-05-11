@@ -1,0 +1,20 @@
+package aulas;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+
+public class Arquivos {
+	public static void main(String[] args) {
+		String filepath = "output.txt";
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filepath))) {
+			bw.write("Hello, world!");
+			bw.newLine();
+			bw.write("This is a second line");
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

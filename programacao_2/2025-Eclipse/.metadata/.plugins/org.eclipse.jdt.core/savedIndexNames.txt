@@ -1,0 +1,2 @@
+INDEX VERSION 1.134+E:\Larré\2º período\2025-Eclipse\.metadata\.plugins\org.eclipse.jdt.core
+2698959002.index

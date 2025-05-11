@@ -1,0 +1,8 @@
+package aula;
+
+public class Cachorro extends Animal {
+	// Somos forçados a implementar o método abstrato
+	public void som() {
+		System.out.println("Au au au au!");
+	}
+}

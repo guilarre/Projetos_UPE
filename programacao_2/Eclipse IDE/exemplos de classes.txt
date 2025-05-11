@@ -1,0 +1,33 @@
+class Monitor
+
+atributos:
+- marca
+- tamanho de tela
+- contraste
+- color space
+- tempo de resposta
+
+métodos:
+- ligar
+- desligar
+- alterar brilho
+
+#################
+
+class Celular
+
+atributos:
+- marca
+- tamanho de tela
+- operadora
+- capacidade de armazenamento
+- resolução câmera
+
+métodos:
+- ligar
+- desligar
+- fazer ligação
+- conectar à internet
+- abrir aplicativo
+- tirar foto
+- 

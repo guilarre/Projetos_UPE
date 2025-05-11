@@ -1,0 +1,63 @@
+package aulas;
+//import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.File;
+import java.util.Scanner;
+
+public class Arquivos {
+	public static void main(String[] args) {
+		String filepath = "output.txt";
+		
+//		ESCRITA DE ARQUIVOS:
+		
+//		BufferedWriter é bom quando tem muitas escritas pequenas (e.g. em um loop).
+//		Sem o BW, isso faria 40 chamadas para escrita, o que é péssimo para a eficiência de escrita:
+//		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filepath))) {
+//			for(int i = 0; i < 20; i++) {
+//			    bw.write("foorbar");
+//			    bw.newLine();
+//			}
+//			bw.close();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		
+//		Já para escritas curtas, FileWriter é suficiente:
+		try (FileWriter fw = new FileWriter(filepath)) {
+			fw.write("Hello, world!");
+			fw.write("\n");
+			fw.write("This is a second line. (filewriter)");
+			fw.close();			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+//		Igual ao FileWriter, com algumas opções a mais de tratamento de erro, e algumas outras diferenças, como mais métodos e construtores
+		try (PrintWriter pw = new PrintWriter(filepath)) {
+			pw.println("Hello, world!");
+			pw.println("This is a second line. (printwriter)");
+			pw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+//		Dá pra usar o PrintWriter como System.out.println(). O PW é eficiente quando se quer escrever mais de 1000 linhas de uma vez na tela. Outra diferença é que PW escreve caracteres, enquanto o PrintStream (println comum) escreve bytes - converte pro encoding padrão do sistema antes de escrever.
+		try (PrintWriter pw = new PrintWriter(System.out)) {
+			pw.println("Hello, world!");
+			pw.println("This is a second line. (printwriter)");
+			pw.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+//		LEITURA DE ARQUIVOS:
+		String filepath2 = "example.txt";
+		
+		try (BufferedReader br = new BufferedReader)
+	}
+}

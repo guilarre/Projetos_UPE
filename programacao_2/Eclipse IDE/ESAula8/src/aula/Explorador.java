@@ -1,0 +1,17 @@
+package aula;
+
+public class Explorador implements Mapa, Gps {
+	// Precisa de Override??
+	@Override
+	public void coordenadas(String direcao) {
+		System.out.println(String.format("*Andando para o %s*", direcao));
+	}
+	@Override
+	public void movimento() {
+		System.out.println("*Andando*");
+	}
+	@Override
+	public void pontos() {
+		System.out.println("*Marcando pontos no mapa*");
+	}
+}

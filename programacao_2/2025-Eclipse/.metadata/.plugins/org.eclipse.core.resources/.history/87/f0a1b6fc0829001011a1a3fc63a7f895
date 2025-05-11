@@ -1,0 +1,36 @@
+package aulas;
+
+public class Aula {
+
+	public static void main(String[] args) {
+//		Concat é exatamente igual ao +
+		String str1 = "Hello";
+		String str2 = "World";
+		String result = str1.concat(" ").concat(str2);
+//		System.out.println(result);
+
+//		Length
+//		System.out.println(result.length());
+		
+		String substr1 = result.substring(6);
+		String substr2 = result.substring(0, 5);
+//		System.out.println(substr1 + "\n" + substr2);
+		
+//		Comparando strings
+		String str3 = "hello";
+		System.out.println(str1.equals(str3));
+		System.out.println(str1.equalsIgnoreCase(str3));
+		
+//		Substituição
+		String newstr = result.replace('o', 'a');
+		System.out.println(newstr);
+		
+//		Substituição usando regex
+		String myStr = "I love cats. Cats are very easy to love. Cats are very popular.";
+		String regex = "(?i)cat";
+		System.out.println(myStr.replaceAll(regex, "dog"));
+		
+		System.out.println(myStr.replaceFirst(regex, "dog"));
+
+	}
+}

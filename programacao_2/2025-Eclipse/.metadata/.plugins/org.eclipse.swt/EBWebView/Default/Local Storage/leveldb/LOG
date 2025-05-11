@@ -1,0 +1,4 @@
+2025/05/11-17:41:42.130 4d34 Reusing MANIFEST E:\Larré\2º período\2025-Eclipse\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/05/11-17:41:52.534 4d34 Recovering log #3
+2025/05/11-17:41:52.542 4d34 (ignoring error) E:\Larré\2º período\2025-Eclipse\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log: dropping 21 bytes; Corruption: checksum mismatch
+2025/05/11-17:42:03.586 4d34 Reusing old log E:\Larré\2º período\2025-Eclipse\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 

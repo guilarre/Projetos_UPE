@@ -1,0 +1,32 @@
+package exercicioAula;
+import java.util.ArrayList;
+
+public class Funcionario extends Pessoa {
+	public String cargo;
+	private static ArrayList<Funcionario> funcionarios = new ArrayList<>();
+	
+	public Funcionario(String nome, String cpf, int idade, String cargo) {
+		super(nome, cpf, idade);
+		this.cargo = cargo;
+		funcionarios.add(this);
+	}
+	
+	public String getCargo() {
+		return cargo;
+	}
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+	
+	public void deleteFuncionario(String cpf) {
+		for (int i = 0; i < funcionarios.size(); i++) {
+			if (this.cpf == cpf) {
+				funcionarios.remove(i);
+				System.out.println("Funcionário deletado!");
+			}
+			else {
+				System.out.println("ERRO: Funcionário não encontrado!");
+			}
+		}
+	}
+}

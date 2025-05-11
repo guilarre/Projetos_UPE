@@ -1,0 +1,13 @@
+package aula;
+
+public class Explorador implements Mapa, Gps {
+	public void coordenadas(String direcao) {
+		System.out.println(String.format("*Andando para o %s*", direcao));
+	}
+	public void movimento() {
+		System.out.println("*Andando*");
+	}
+	public void pontos() {
+		System.out.println("*Marcando pontos no mapa*");
+	}
+}

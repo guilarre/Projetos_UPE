@@ -1,0 +1,14 @@
+package exercicioAula;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Aluno aluno1 = new Aluno("Guigs", "123456789-00", 28, "00001");
+		Professor professor1 = new Professor("Lusgas", "666666666-66", 666, 6666);
+		Funcionario funcionario1 = new Funcionario("Marcin", "321123321-22", 20, "CEO");
+		aluno1.listarAlunos();
+		professor1.listarProfessores();
+		//funcionario1.listarFuncionarios();
+	}
+
+}

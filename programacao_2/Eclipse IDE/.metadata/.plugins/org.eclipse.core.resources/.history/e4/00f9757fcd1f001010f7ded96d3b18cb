@@ -1,0 +1,10 @@
+package aula;
+
+public class Explorador implements Mapa {
+	public void coordenadas(String direcao) {
+		System.out.println(String.format("*Andando para o %s*", direcao));
+	}
+	public void movimento() {
+		System.out.println("*Andando*");
+	}
+}

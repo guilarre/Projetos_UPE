@@ -1,0 +1,9 @@
+package exercicioAula;
+
+public class Professor extends Pessoa {
+	public double salario;
+	public Professor(String nome, String cpf, int idade, double salario) {
+		super(nome, cpf, idade);
+		this.salario = salario;
+	}
+}

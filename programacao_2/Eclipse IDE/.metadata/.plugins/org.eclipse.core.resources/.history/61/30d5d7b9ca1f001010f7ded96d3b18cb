@@ -1,0 +1,7 @@
+package aula;
+
+public class Cachorro extends Animal {
+	public void som() {
+		System.out.println("Au au au au!");
+	}
+}
